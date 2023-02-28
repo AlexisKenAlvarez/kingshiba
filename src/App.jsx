@@ -8,8 +8,7 @@ import Utilities from './components/Utilities'
 
 
 const App = () => {
-
-
+    
     return (
         <div className='relative bg-myred' >  
             <div className='absolute top-0 left-0 h-2 w-2 bg-transparent' id="home"></div>

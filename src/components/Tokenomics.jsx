@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { MdCopyAll } from 'react-icons/md'
 
 const Tokenomics = () => {
 
@@ -52,8 +53,9 @@ const Tokenomics = () => {
                             <h2 className="truncate">{contractAddress}</h2>
                         </div>
 
-                        <button className='font-king text-myred bg-white px-10 py-4 rounded-xl hover:shadow-glow2 transition-all ease-in-out duration-300'>
-                            <p className='mt-[-5px] text-'>COPY ADDRESS</p>
+                        <button className='font-king text-myred bg-white flex items-center gap-x-3 px-10 py-4 rounded-xl hover:shadow-glow2 transition-all ease-in-out duration-300' onClick={handleCopy}>
+                            <MdCopyAll className='text-xl'/>
+                            <p className='mt-[-5px] text-'>{clicked ? "Copied to clipboard!" : "Copy address" }</p>
                         </button>
                     </div>
                 </div>
