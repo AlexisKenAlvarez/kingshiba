@@ -22,7 +22,12 @@ module.exports = {
             glow: '0px 0px 15px 0px rgba(254,208,70,0.99)',
             glow2: '0px 0px 30px 0px rgba(254,208,70,0.99)'
 
+        },
+        textShadow: {
+            tshad: '0px 10px 2px #000000'
         }
     },
-    plugins: [],
+    plugins: [
+        require('tailwindcss-textshadow')
+    ],
 }
