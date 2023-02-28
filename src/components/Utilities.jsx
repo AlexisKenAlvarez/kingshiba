@@ -57,7 +57,7 @@ const Utilities = () => {
 
 
     return (
-        <section className='w-full h-auto py-20 pb-28 bg-myred relative'>
+        <section className='w-full h-auto py-32 bg-myred relative'>
             <img src="/heroline.webp" alt="Line" className="absolute bottom-0 left-0 z-0" />
 
             <div className="w-full max-w-[1600px] md:px-14 px-8 mx-auto">

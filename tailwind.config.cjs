@@ -10,7 +10,8 @@ module.exports = {
         extend: {
             colors: {
                 header: "#FED046",
-                myred: "#4C0000"
+                myred: "#4C0000",
+                darkred: '#310101'
             },
             fontFamily: {
                 king: ['King'],
