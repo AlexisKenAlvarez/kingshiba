@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Utilities = () => {
 
@@ -55,17 +57,24 @@ const Utilities = () => {
         ]
     };
 
+    const options = {
+        triggerOnce: true,
+        threshold: 0.9
+    }
+
+    const [lineRef, lineView] = useInView(options)
+
 
     return (
-        <section className='w-full h-auto py-32 bg-myred relative'>
+        <section className='w-full h-auto py-32 bg-myred relative' id="utility">
             <img src="/heroline.webp" alt="Line" className="absolute bottom-0 left-0 z-0" />
 
             <div className="w-full max-w-[1600px] md:px-14 px-8 mx-auto">
 
                 <div className="uppercase text-header font-king w-full lg:text-8xl md:text-7xl text-5xl flex items-center md:gap-x-10 gap-x-3 mx-auto">
-                    <div className="w-full h-[2px] bg-header mt-8"></div>
-                    <p className='text-shadow-tshad'>UTILITIES</p>
-                    <div className="w-full h-[2px] bg-header mt-8"></div>
+                    <div className="w-0 h-[2px] bg-header mt-8 origin-right transition-all ease-in-out duration-[1.5s]" style={ lineView ? {width: "100%"} : {}} ref={lineRef}></div>
+                    <motion.p whileInView={{rotate: [0, -20, 0], scale: [1, 1.2, 1.2, 1]}} transition={{duration: 1, delay: 0.3}} className='text-shadow-tshad text-center mx-auto'>UTILITIES</motion.p>
+                    <div className="w-0 h-[2px] bg-header mt-8 origin-left transition-all ease-in-out duration-[1.5s]" style={ lineView ? {width: "100%"} : {}}></div>
 
                 </div>
 
