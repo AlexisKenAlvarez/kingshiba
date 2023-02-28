@@ -14,7 +14,7 @@ const Nav = () => {
 
     return (
         <motion.nav initial={{ opacity: 0 }} animate={{ opacity: 100 }} transition={{ duration: 0.7 }} className='w-full h-auto pb-10 lg:h-auto px-10 py-7 text-white absolute z-20 top-0 left-0 shadow-nav' style={active ? { position: "fixed" } : {}}>
-            <div className="max-w-[1500px] w-full h-auto flex items-center justify-between mx-auto">
+            <div className="max-w-[1400px] w-full h-auto flex items-center justify-between mx-auto">
                 <a href="#home" className='flex items-center gap-x-2'>
                     <img src="/logo.webp" alt="Logo" className="w-16 cursor-pointer" />
                 </a>
